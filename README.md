@@ -22,7 +22,14 @@ Users should be able to:
 
 ### Screenshot
 
+#### Deskop
 ![](./screenshots/deskop-screenshot.jpg)
+
+#### Tablet
+![](./screenshots/tablet-screenshot.jpg)
+
+#### Mobile
+![](./screenshots/mobile-screenshot.jpg)
 
 ## My process
 
