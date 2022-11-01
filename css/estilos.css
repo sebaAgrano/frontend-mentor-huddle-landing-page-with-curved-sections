@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Poppins:wght@700&display=swap');
+
+/* DECLARACION VARIABLES */
+:root {
+    /* COLORES PRIMARIOS */
+    --rosa:hsl(322, 100%, 66%);
+    --rosa-claro:hsl(321, 100%, 78%);
+    --rojo-claro:hsl(0, 100%, 63%);
+    /* COLORES NEUTRALES */
+    --cian-oscuro:hsl(192, 100%, 9%);
+    --azul-palido:hsl(207, 100%, 98%);
+    /* TIPOGRAFIAS */
+    --fuente-encabezados:'Poppins', sans-serif;
+    --fuente-body:'Open Sans', sans-serif;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+html {
+    font-size: 14px;
+    line-height: 1.6rem;
+    background-color: rgb(255, 255, 255);
+    font-family: var(--fuente-body);
+}
+
+/* HEADER */
+header {
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-width: 30%;
+}
+
+header a {
+    color: var(--rosa);
+    text-decoration: none;
+    font-size: 0.8rem;
+    border: 1px solid var(--rosa);
+    border-radius: 50px;
+    padding: 0.3rem 1.2rem;
+}
+
+header a:hover {
+    color: var(--rosa-claro);
+    border: 1px solid var(--rosa-claro);
+    box-shadow: 0 0 0.2rem var(--rosa-claro);
+}
+
+/* BODY */
+/* SECCION INFORMACION */
+section.seccion-informacion {
+    color: var(--cian-oscuro);
+    width: 80%;
+    margin: 6rem auto 1rem;
+    text-align: center;
+}
+
+section.seccion-informacion h1 {
+    font-weight: 800;
+    font-size: 1.9rem;
+    line-height: 2.7rem;
+}
+
+section.seccion-informacion p {
+    margin: 2rem 0 3rem;
+}
+
+a.seccion-informacion-boton {
+    background-color: var(--rosa);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: block;
+    width: max-content;
+    padding: 0.8rem 2.5rem;
+    margin: 0 auto 7rem;
+    border-radius: 50px;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+a.seccion-informacion-boton:hover {
+    background-color: var(--rosa-claro);
+}
+
+section.seccion-informacion a.seccion-informacion-boton+img {
+    width: 100%;
+}
+
+div.contenido-informacion {
+    width: max-content;
+    margin: 7rem auto 0;
+}
+
+div.contenido-informacion img {
+    width: 2rem;
+    margin-left: 0.7rem;
+    display: block;
+    text-align: left;
+}
+
+div.contenido-informacion p.cantidad {
+    font-weight: 700;
+    font-size: 4.2rem;
+    margin: 1.9rem 0 2.3rem;
+}
+
+div.contenido-informacion p.subtitulo {
+    font-weight: 600;
+    opacity: 45%;
+    margin: 0.6rem auto 0;
+}
+
+/* SECCIONES */
+img.separador-seccion,
+img.separador-footer {
+    display: block;
+    width: 100%;
+}
+
+img.ancho-pc {
+    display: none;
+}
+
+div.contenedor-seccion {
+    background-color: var(--azul-palido);
+    color: var(--cian-oscuro);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+}
+
+div.seccion-fondo-blanco {
+    background-color: white;
+    flex-direction: column;
+    margin: 5rem 0 5rem;
+}
+
+div.contenedor-seccion img {
+    width: 70%;
+    margin: 3rem 0 7rem;
+}
+
+div.contenido-seccion {
+    width: 85%;
+}
+
+div.contenido-seccion h3 {
+    font-family: var(--fuente-encabezados);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+div.contenido-seccion p {
+    margin: 1.6rem 0 5rem;
+}
+
+/* SECCION BOTON */
+section.seccion-boton {
+    margin-bottom: 15rem;
+}
+
+section.seccion-boton p {
+    font-weight: 800;
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+    width: 70%;
+    text-align: center;
+    margin: 7rem auto 3rem;
+}
+
+/* FOOTER */
+div.contenedor-footer {
+    background-color: var(--cian-oscuro);
+    color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 3rem 9%;
+}
+
+p.info {
+    margin: 1.6rem 0 3rem;
+}
+
+div.footer-subscripcion h3 {
+    font-size: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+form div {
+    width: 100%;
+}
+
+form input {
+    width: 100%;
+    height: 3.2rem;
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    padding: 0 10px;
+    margin-bottom: 24.39px;
+    
+}
+
+form input:invalid {
+    border: 1px solid var(--rojo-claro);
+    margin-bottom: 0;    
+}
+
+form div p {
+    color: var(--rojo-claro);
+    font-size: 0.7rem;
+    display: none;
+}
+
+form input:invalid + p {
+    display: initial;
+}
+
+form button {
+    background-color: var(--rosa);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    height: 3.2rem;
+    padding: 0 2.5rem;
+    border: 0;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: var(--rosa-claro);
+}
+
+div.footer-contacto {
+    margin-top: 8rem;
+}
+
+div.footer-contacto-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+div.footer-contacto-item p {
+    font-size: 0.9rem;
+    margin-left: 1.2rem;
+}
+
+div.contenedor-redes-sociales ion-icon {
+    color: white;
+    font-size: 1.8rem;
+    margin: 2rem 0.8rem 0 0;
+}
+
+div.contenedor-redes-sociales ion-icon:hover {
+    color: cyan;
+}
+
+/* MEDIAS QUERIES*/
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    header img {
+        max-width: initial;
+    }
+
+    header a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: 2px solid var(--rosa);
+        padding: 0.5rem 2rem;
+    }
+
+    header a:hover {
+        border: 2px solid var(--rosa-claro);
+    }
+
+    section.seccion-informacion h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    section.seccion-informacion p {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+
+    a.seccion-informacion-boton {
+        font-size: 1.2rem;
+        padding: 1.5rem 6rem;
+    }
+
+    div.contenido-informacion img {
+        width: initial;
+    }
+
+    div.contenido-informacion p.cantidad {
+        font-size: 6.7rem;
+        margin: 3rem 0 4rem;
+    }
+
+    div.contenido-informacion p.subtitulo {
+        font-size: 1.6rem;
+    }
+
+    div.contenido-seccion h3 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    section.seccion-boton p {
+        font-size: 2.6rem;
+    }
+
+    div.contenedor-redes-sociales ion-icon {
+        font-size: 2.3rem;
+        margin: 4rem 1rem 0 0;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 6rem 5rem 7rem;
+    }
+
+    section.seccion-informacion {
+        width: 100%;
+        margin-bottom: 10rem;
+    }
+
+    section.seccion-informacion p {
+        width: 45%;
+        margin: 2rem auto 3rem;
+    }
+
+    section.seccion-informacion a.seccion-informacion-boton+img {
+        max-width: 85%;
+    }
+
+    div.contenedor-informacion {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    img.ancho-pc {
+        display: block;
+    }
+
+    img.ancho-celular {
+        display: none;
+    }
+
+    div.contenedor-seccion {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 5rem 0;
+    }
+
+    div.contenedor-seccion img {
+        width: 35%;
+        margin: 0;
+    }
+
+    div.contenido-seccion {
+        text-align: left;
+        width: 33%;
+    }
+
+    section.seccion-boton {
+        margin-bottom: 10rem;
+    }
+
+    div.contenedor-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 7rem;
+    }
+
+    div.footer-contacto {
+        width: 30%;
+        margin-top: 0;
+    }
+
+    div.footer-subscripcion {
+        width: 42%;
+    }
+
+    div.footer-subscripcion p {
+        width: 75%;
+    }
+
+    div.footer-subscripcion div {
+        width: 75%;
+    }
+
+    form {
+        flex-direction: row;
+        align-items: initial;
+        justify-content: space-between;
+    }
+
+    form input {
+        width: 90%;
+        height: 3rem;
+        display: block;
+    }
+
+    form input:invalid {
+        border: 2px solid var(--rojo-claro);
+    }
+
+    form button {
+        height: 3rem;
+        width: 35%;
+        padding: 0;
+    }
+}
